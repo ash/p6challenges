@@ -1,0 +1,28 @@
+100 programming challenges in Perl 6
+
+Print "Hello, World!".
+Ask a name and greet a person.
+Print squares.
+Print a factorial of n.
+Generate Fibonacci list.
+Print odd and even numbers.
+Check if a number is prime.
+Print the list of first N prime numbers.
+Guess the number.
+Generate multiplication table.
+Check if a year is leap.
+Print the list of all leap year in the next 300 years.
+
+Find the smallest and the biggerst number in a list of integers.
+Print a list in reverse order.
+Check if the element is in a list.
+Find the sum of the list elements.
+Concatenate two lists.
+Sort a list.
+Zip two lists.
+Calculate a sum of the digits of a given number.
+Print the list of the digits in a number.
+Print unique digits from a number.
+
+Convert a phrase to the Morse code.
+Convert Morse code to text.
