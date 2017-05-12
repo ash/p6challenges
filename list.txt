@@ -1,11 +1,11 @@
 100 programming challenges in Perl 6
 
-Print "Hello, World!".
-Ask a name and greet a person.
-Print squares.
-Print a factorial of n.
-Generate Fibonacci list.
-Print odd and even numbers.
+helloworld: Print "Hello, World!".
+greetname:  Ask a name and greet a person.
+squares:    Print squares of integers between 1 and 10.
+factorial:  Print a factorial of n.
+fibinacci:  Canculate Nth Fibonacci number.
+odd:        Print odd numbers less than 20.
 Check if a number is prime.
 Print the list of first N prime numbers.
 Guess the number.
