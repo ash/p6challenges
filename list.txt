@@ -6,10 +6,12 @@ squares:    Print squares of integers between 1 and 10.
 factorial:  Print a factorial of n.
 fibinacci:  Canculate Nth Fibonacci number.
 odd:        Print odd numbers less than 20.
-Check if a number is prime.
-Print the list of first N prime numbers.
+power2:     Print powers of 2.
+prime:      Check if a number is prime.
+primelist:  Print the list of first N prime numbers.
+minmax:     Find the minumum (maximum) number in the given list.
+producttable:   Generate multiplication table.
 Guess the number.
-Generate multiplication table.
 Check if a year is leap.
 Print the list of all leap year in the next 300 years.
 
@@ -26,3 +28,4 @@ Print unique digits from a number.
 
 Convert a phrase to the Morse code.
 Convert Morse code to text.
+

@@ -1,3 +1,3 @@
 print 'Enter your name: ';
-my $name = get();
+my $name = $*IN.get();
 say "Hello, $name!";
