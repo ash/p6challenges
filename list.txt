@@ -11,21 +11,50 @@ prime:      Check if a number is prime.
 primelist:  Print the list of first N prime numbers.
 minmax:     Find the minumum (maximum) number in the given list.
 producttable:   Generate multiplication table.
-Guess the number.
-Check if a year is leap.
-Print the list of all leap year in the next 300 years.
+leapyear:   Check if a year is leap.
+isinlist:   Check if the element is in a list.
+sumofelements: Find the sum of the list elements.
+guessnumber:   Guess the number.
+sumofdigits:    Calculate a sum of the digits of a given number.
+firstodd:   Find the first odd number
+reversestring: Reverse a string
 
-Find the smallest and the biggerst number in a list of integers.
+templating: Implement simple %templating% engine.
+
 Print a list in reverse order.
-Check if the element is in a list.
-Find the sum of the list elements.
 Concatenate two lists.
 Sort a list.
 Zip two lists.
-Calculate a sum of the digits of a given number.
-Print the list of the digits in a number.
+
+Print the list of digits in a number.
 Print unique digits from a number.
 
 Convert a phrase to the Morse code.
 Convert Morse code to text.
+
+file1.txt -> file2.txt
+
+
+
+palindrome: Check if the string is a palindrome
+longestpalindrome: Find the longest polindromic substring in a string.
+
+
+
+Sum of numbers between 1 and n using loops and recursions.
+
+Take elements of the list at even positions
+Compute running total
+Compute average and sum of squares
+Rotate a list by N positions.
+Print a number in hexadecimal, octal and binary representations.
+
+
+All possible combinations of arithmetical operations on a list.
+Print calendar for a given month and year.
+Tell the date of the Nth day in a year.
+Generate an essay.
+
+Find the longest common substring of the two given strings.
+Multiply two matrices.
 
