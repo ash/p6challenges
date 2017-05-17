@@ -1,9 +1,8 @@
-100 programming challenges in Perl 6
-
 helloworld: Print "Hello, World!".
 greetname:  Ask a name and greet a person.
 squares:    Print squares of integers between 1 and 10.
 factorial:  Print a factorial of n.
+swap: Swap two values
 fibinacci:  Canculate Nth Fibonacci number.
 odd:        Print odd numbers less than 20.
 power2:     Print powers of 2.
@@ -18,8 +17,18 @@ guessnumber:   Guess the number.
 sumofdigits:    Calculate a sum of the digits of a given number.
 firstodd:   Find the first odd number
 reversestring: Reverse a string
-
 templating: Implement simple %templating% engine.
+palindrome: Check if the string is a palindrome
+longestpalindrome: Find the longest polindromic substring in a string.
+incfilename: file1.txt -> file2.txt
+sumofnumbers: Sum of numbers between 1 and n using loops and recursions.
+morse: Convert a phrase to the Morse code.
+morse-text: Convert Morse code to text.
+longestcommon: Find the longest common substring of the two given strings.
+
+
+Order the elements of an array of integers to get the maximum possible number.
+
 
 Print a list in reverse order.
 Concatenate two lists.
@@ -29,19 +38,8 @@ Zip two lists.
 Print the list of digits in a number.
 Print unique digits from a number.
 
-Convert a phrase to the Morse code.
-Convert Morse code to text.
-
-file1.txt -> file2.txt
 
 
-
-palindrome: Check if the string is a palindrome
-longestpalindrome: Find the longest polindromic substring in a string.
-
-
-
-Sum of numbers between 1 and n using loops and recursions.
 
 Take elements of the list at even positions
 Compute running total
@@ -53,8 +51,8 @@ Print a number in hexadecimal, octal and binary representations.
 All possible combinations of arithmetical operations on a list.
 Print calendar for a given month and year.
 Tell the date of the Nth day in a year.
-Generate an essay.
+~ Generate an essay.
 
-Find the longest common substring of the two given strings.
 Multiply two matrices.
 
+Rotate the matrix by 90 degrees.
