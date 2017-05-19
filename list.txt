@@ -25,9 +25,12 @@ sumofnumbers: Sum of numbers between 1 and n using loops and recursions.
 morse: Convert a phrase to the Morse code.
 morse-text: Convert Morse code to text.
 longestcommon: Find the longest common substring of the two given strings.
-
-
-Order the elements of an array of integers to get the maximum possible number.
+ordergetmax: Order the elements of an array of integers to get the maximum possible number.
+rotatelist: Rotate a list by N positions.
+uniquenumbers: Print unique digits from a number.
+pi: Print the value of pi.
+removespaces: Remove extra spaces.
+repeatedwords: Remove double words.
 
 
 Print a list in reverse order.
@@ -36,15 +39,10 @@ Sort a list.
 Zip two lists.
 
 Print the list of digits in a number.
-Print unique digits from a number.
-
-
-
 
 Take elements of the list at even positions
 Compute running total
 Compute average and sum of squares
-Rotate a list by N positions.
 Print a number in hexadecimal, octal and binary representations.
 
 
