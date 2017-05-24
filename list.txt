@@ -54,3 +54,13 @@ Tell the date of the Nth day in a year.
 Multiply two matrices.
 
 Rotate the matrix by 90 degrees.
+
+
+index of max element: http://stackoverflow.com/questions/41554702/how-do-i-find-the-index-of-the-maximum-value-in-a-list-in-perl-6
+
+
+http://stackoverflow.com/questions/43404189/how-can-i-open-a-file-for-writing-only-when-it-doesnt-exist-in-perl-6
+http://stackoverflow.com/questions/43147958/perl6-match-elements-in-a-list-with-another-list
+http://stackoverflow.com/questions/41763453/perl-6-whats-the-best-way-to-check-if-an-element-is-in-a-list
+http://stackoverflow.com/questions/41002650/perl6-ish-expression-for-the-bits-of-an-integer
+http://stackoverflow.com/questions/37173023/how-do-i-flatten-a-list-of-lists-in-perl-6
