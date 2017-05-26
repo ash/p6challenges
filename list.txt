@@ -39,6 +39,10 @@ sringlength: number of characters
 countwords: count words
 currenttime: print current time
 formattedtime: format date and time in a desired way.
+duptext: Find duplicated text fragments
+
+read whole text file (slurp)
+
 
 Anagram test
 Pasword strength test
