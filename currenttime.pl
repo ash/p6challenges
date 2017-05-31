@@ -10,3 +10,4 @@ say $dt.hour;
 say $dt.minute;
 say $dt.second;
 say $dt.second.Int;
+say $dt.whole-second;

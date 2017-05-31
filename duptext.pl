@@ -5,7 +5,7 @@ my $length = $text.chars;
 
 my %phrases;
 my $start = 0;
-while $text ~~ m:c($start)/ (<< [\w+] ** 4 %% \s >>) .+ $0 / {
+while $text ~~ m:c($start)/ (<< [\w+] ** 5 %% \s >>) .+? $0 / {
     $start = $0.from + 1;
     %phrases{$0}++;
 
