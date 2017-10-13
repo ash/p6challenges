@@ -40,6 +40,8 @@ countwords: count words
 currenttime: print current time
 formattedtime: format date and time in a desired way.
 duptext: Find duplicated text fragments
+intersectingcircles: Do circles intersect?
+countvowels: Count vowels
 
 read whole text file (slurp)
 
@@ -53,8 +55,6 @@ Filter even numbers
 sort records
 Number to Roman numerals
 Roman numerals to decimal integer
-Count vowels
-Do circles intersect?
 Currency converter (via hash)
 Interest (via reduction [])
 Name of the Nth month
