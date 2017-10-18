@@ -1,12 +1,12 @@
-#my $program = '++++++++[>++++[>++>+++>+++>+<<<<-]>+>+>->>+[<]<-]>>.>---.+++++++..+++.>>.<-.<.+++.------.--------.>>+.>++.';
+my $program = '++++++++[>++++[>++>+++>+++>+<<<<-]>+>+>->>+[<]<-]>>.>---.+++++++..+++.>>.<-.<.+++.------.--------.>>+.>++.';
 #$program = '++>+++++[<+>-]++++++++[<++++++>-]<.';
-#$program = '>+[[>],.-------------[+++++ +++++ +++[<]]>]<<[<]>>[.>]';
+#my $program = '>+[[>],.-------------[+++++ +++++ +++[<]]>]<<[<]>>[.>]';
 
-my $program = $*IN.slurp;
+#my $program = $*IN.slurp;
 brainfuck($program);
 
 sub brainfuck($program) {
-    my @program = $program.comb('');
+    my @program = $program.comb('');say @program;
     my $program_pointer = 0;
     my @data_memory;
     my $data_pointer = 0;
@@ -18,7 +18,7 @@ sub brainfuck($program) {
             when '+' {@data_memory[$data_pointer]++}
             when '-' {@data_memory[$data_pointer]--}
             when '.' {print @data_memory[$data_pointer].chr}
-            when ',' {@data_memory[$data_pointer] = $*IN.getc.ord}
+            when ',' {@data_memory[$data_pointer] = $*IN.getc.?ord}
             when '[' {                
                 $program_pointer = _move_forward(@program, $program_pointer)
                     unless @data_memory[$data_pointer];
