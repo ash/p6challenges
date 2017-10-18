@@ -12,7 +12,6 @@ while $program_pointer < @program.elems {
         say $program;
         say ' ' x $program_pointer, '^', $_;
 
-
         when '>' {$data_pointer++}
         when '<' {$data_pointer--}
         when '+' {@data_memory[$data_pointer]++}
