@@ -6,12 +6,16 @@ my $program = '++++++++[>++++[>++>+++>+++>+<<<<-]>+>+>->>+[<]<-]>>.>---.+++++++.
 brainfuck($program);
 
 sub brainfuck($program) {
-    my @program = $program.comb('');say @program;
+    my @program = $program.comb('');
     my $program_pointer = 0;
     my @data_memory;
     my $data_pointer = 0;
 
     while $program_pointer < @program.elems {
+say $program;
+say ' ' x $program_pointer ~ '^';
+say @data_memory[0..$data_pointer - 1] ~ ' [' ~ @data_memory[$data_pointer] ~ '] ' ~ @data_memory[$data_pointer + 1..*];
+ 
         given @program[$program_pointer] {
             when '>' {$data_pointer++}
             when '<' {$data_pointer--}
