@@ -1,55 +1,60 @@
-my $program = '++++++++[>++++[>++>+++>+++>+<<<<-]>+>+>->>+[<]<-]>>.>---.+++++++..+++.>>.<-.<.+++.------.--------.>>+.>++.';
-$program = '++>+++++[<+>-]++++++++[<++++++>-]<.';
+#my $program = '++++++++[>++++[>++>+++>+++>+<<<<-]>+>+>->>+[<]<-]>>.>---.+++++++..+++.>>.<-.<.+++.------.--------.>>+.>++.';
+#$program = '++>+++++[<+>-]++++++++[<++++++>-]<.';
+#$program = '>+[[>],.-------------[+++++ +++++ +++[<]]>]<<[<]>>[.>]';
 
-$program = '>+[[>],.-------------[+++++ +++++ +++[<]]>]<<[<]>>[.>]';
+my $program = $*IN.slurp;
+brainfuck($program);
 
-my @program = $program.comb('');
-my $program_pointer = 0;
-my @data_memory;
-my $data_pointer = 0;
+sub brainfuck($program) {
+    my @program = $program.comb('');
+    my $program_pointer = 0;
+    my @data_memory;
+    my $data_pointer = 0;
 
-while $program_pointer < @program.elems {
-    my $program_pointer_updated = False;
-
-    given @program[$program_pointer] {
-
-        # say $program;
-        # say ' ' x $program_pointer, '^', $_;
-
-        when '>' {$data_pointer++}
-        when '<' {$data_pointer--}
-        when '+' {@data_memory[$data_pointer]++}
-        when '-' {@data_memory[$data_pointer]--}
-        when '.' {print @data_memory[$data_pointer].chr}
-        when ',' {@data_memory[$data_pointer] = $*IN.getc.ord}
-        when '[' {
-            unless @data_memory[$data_pointer] {
-                my $level = 1;
-                while $level && $program_pointer < @program.elems {
-                    $program_pointer++;
-                    given @program[$program_pointer] {
-                        when '[' {$level++}
-                        when ']' {$level--}
-                    }
-                }
-                $program_pointer_updated = True;
+    while $program_pointer < @program.elems {
+        given @program[$program_pointer] {
+            when '>' {$data_pointer++}
+            when '<' {$data_pointer--}
+            when '+' {@data_memory[$data_pointer]++}
+            when '-' {@data_memory[$data_pointer]--}
+            when '.' {print @data_memory[$data_pointer].chr}
+            when ',' {@data_memory[$data_pointer] = $*IN.getc.ord}
+            when '[' {                
+                $program_pointer = _move_forward(@program, $program_pointer)
+                    unless @data_memory[$data_pointer];
+            }
+            when ']' {                
+                $program_pointer = _move_back(@program, $program_pointer)
+                    if @data_memory[$data_pointer];
             }
         }
-        when ']' {
-            if @data_memory[$data_pointer] {
-                my $level = 1;
-                while $level && $program_pointer >= 0 {
-                    $program_pointer--;
-                    given @program[$program_pointer] {
-                        when '[' {$level--}
-                        when ']' {$level++}
-                    }
-                }
-                $program_pointer_updated = True;
-            }
-        }
+
+        $program_pointer++;
     }
+}
 
-    # say @data_memory;
-    $program_pointer++ unless $program_pointer_updated;
+sub _move_back(@program, $program_pointer is copy) {
+    my $level = 1;
+    while $level && $program_pointer >= 0 {
+        $program_pointer--;
+        given @program[$program_pointer] {
+            when '[' {$level--}
+            when ']' {$level++}
+        }
+    }    
+
+    return $program_pointer - 1;
+}
+
+sub _move_forward(@program, $program_pointer is copy) {
+    my $level = 1;
+    while $level && $program_pointer < @program.elems {
+        $program_pointer++;
+        given @program[$program_pointer] {
+            when '[' {$level++}
+            when ']' {$level--}
+        }
+    }    
+
+    return $program_pointer - 1;
 }
