@@ -1,16 +1,20 @@
 my $program = '++++++++[>++++[>++>+++>+++>+<<<<-]>+>+>->>+[<]<-]>>.>---.+++++++..+++.>>.<-.<.+++.------.--------.>>+.>++.';
+$program = '++>+++++[<+>-]++++++++[<++++++>-]<.';
 
-my @program = $program.split('');
+$program = '>+[[>],.-------------[+++++ +++++ +++[<]]>]<<[<]>>[.>]';
+
+my @program = $program.comb('');
 my $program_pointer = 0;
 my @data_memory;
 my $data_pointer = 0;
 
 while $program_pointer < @program.elems {
-    my $regular_move = True;
+    my $program_pointer_updated = False;
 
     given @program[$program_pointer] {
-        say $program;
-        say ' ' x $program_pointer, '^', $_;
+
+        # say $program;
+        # say ' ' x $program_pointer, '^', $_;
 
         when '>' {$data_pointer++}
         when '<' {$data_pointer--}
@@ -18,40 +22,34 @@ while $program_pointer < @program.elems {
         when '-' {@data_memory[$data_pointer]--}
         when '.' {print @data_memory[$data_pointer].chr}
         when ',' {@data_memory[$data_pointer] = $*IN.getc.ord}
-        when '[' {say "'[' @data_memory[$data_pointer]";
+        when '[' {
             unless @data_memory[$data_pointer] {
-                my $match = 1;
-                while $match && $program_pointer < @program.elems {
-                    given @program[$program_pointer] {
-                        when '[' {$match++}
-                        when ']' {$match--}
-                    }
-                            say $program;
-                            say '.' x $program_pointer, '^', $_;
-                            say "->$program_pointer";
+                my $level = 1;
+                while $level && $program_pointer < @program.elems {
                     $program_pointer++;
+                    given @program[$program_pointer] {
+                        when '[' {$level++}
+                        when ']' {$level--}
+                    }
                 }
-                $regular_move = False;
+                $program_pointer_updated = True;
             }
         }
-        when ']' {say "']' @data_memory[$data_pointer]";
+        when ']' {
             if @data_memory[$data_pointer] {
-                my $match = 1;
-                while $match && $program_pointer >= 0 {
-                    given @program[$program_pointer] {
-                        when '[' {$match--}
-                        when ']' {$match++}
-                    }
-                            say $program;
-                            say '.' x $program_pointer, '^', $_;
-                    say "<-$program_pointer";
+                my $level = 1;
+                while $level && $program_pointer >= 0 {
                     $program_pointer--;
+                    given @program[$program_pointer] {
+                        when '[' {$level--}
+                        when ']' {$level++}
+                    }
                 }
-                $regular_move = False;
+                $program_pointer_updated = True;
             }
         }
     }
 
-    say @data_memory;
-    $program_pointer++ if $regular_move;
+    # say @data_memory;
+    $program_pointer++ unless $program_pointer_updated;
 }
