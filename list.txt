@@ -66,8 +66,10 @@ Take elements of the list at even positions
 Compute running total
 Compute average and sum of squares
 All possible combinations of arithmetical operations on a list.
+
 Print calendar for a given month and year.
 Tell the date of the Nth day in a year.
+
 ~ Generate an essay.
 Multiply two matrices.
 Rotate the matrix by 90 degrees.
