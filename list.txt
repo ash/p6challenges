@@ -46,25 +46,26 @@ countvowels: Count vowels
 read whole text file (slurp)
 
 
-Anagram test
++Anagram test
 Pasword strength test
 Magic ball (yes/no/maybe/ask later)
 Pick a winner
-statistics (average, median, std dev)
-Filter even numbers
-sort records
-Number to Roman numerals
-Roman numerals to decimal integer
-Currency converter (via hash)
++statistics (average, median, std dev)
++Filter even numbers
++sort records
++Number to Roman numerals
++Roman numerals to decimal integer
++Currency converter (via hash)
 Interest (via reduction [])
 Name of the Nth month
 Concatenate two lists.
 Sort a list.
 Zip two lists.
-Print the list of digits in a number.
-Take elements of the list at even positions
-Compute running total
-Compute average and sum of squares
+?Print the list of digits in a number.
+?Take elements of the list at even positions
++Compute running total
++Compute average and sum of squares
+
 All possible combinations of arithmetical operations on a list.
 
 Print calendar for a given month and year.
@@ -72,7 +73,7 @@ Tell the date of the Nth day in a year.
 
 ~ Generate an essay.
 Multiply two matrices.
-Rotate the matrix by 90 degrees.
++Rotate the matrix by 90 degrees.
 index of max element: http://stackoverflow.com/questions/41554702/how-do-i-find-the-index-of-the-maximum-value-in-a-list-in-perl-6
 http://stackoverflow.com/questions/43404189/how-can-i-open-a-file-for-writing-only-when-it-doesnt-exist-in-perl-6
 http://stackoverflow.com/questions/43147958/perl6-match-elements-in-a-list-with-another-list
